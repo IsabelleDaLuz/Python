@@ -19,7 +19,7 @@ def moeda(preço = 0, moeda='R$'):
 def leiaDinheiro(msg):
     valido = False
     while not valido:
-        entrada = str(input(msg))
+        entrada = str(input(msg)).replace(',','.')
         if entrada.isalpha():
             print('Preço invalido')
         else:
