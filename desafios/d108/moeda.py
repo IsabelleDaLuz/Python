@@ -15,3 +15,13 @@ def metade(preço = 0):
 
 def moeda(preço = 0, moeda='R$'):
     return f'{moeda}{preço}'.replace('.',',')
+
+def leiaDinheiro(msg):
+    valido = False
+    while not valido:
+        entrada = str(input(msg))
+        if entrada.isalpha():
+            print('Preço invalido')
+        else:
+            valido=True
+            return int(entrada)
